@@ -27,7 +27,7 @@ namespace N11.Persistencia
 
         public async void OnDeleteClicked(object sender, EventArgs args)
         {
-            bool accepted = await DisplayAlert("Confirm", "Are you Sure ?", "Yes", "No");
+            bool accepted = await DisplayAlert("Confirmar", "Excluir?", "Sim", "Não");
             if (accepted)
             {
                 App.DAUtil.DeleteEmployee(mSelEmployee);
