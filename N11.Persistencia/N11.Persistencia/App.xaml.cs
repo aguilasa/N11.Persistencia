@@ -9,11 +9,24 @@ namespace N11.Persistencia
 {
     public partial class App : Application
     {
+        static DataAccess dbUtils;
         public App()
         {
             InitializeComponent();
 
-            MainPage = new N11.Persistencia.MainPage();
+            MainPage = new NavigationPage(new ManageEmployee());
+        }
+
+        public static DataAccess DAUtil
+        {
+            get
+            {
+                if (dbUtils == null)
+                {
+                    dbUtils = new DataAccess();
+                }
+                return dbUtils;
+            }
         }
 
         protected override void OnStart()

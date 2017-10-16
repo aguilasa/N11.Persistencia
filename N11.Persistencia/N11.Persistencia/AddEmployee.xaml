@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="N11.Persistencia.AddEmployee"
+             Title="Adicionar Empregado">
+    <ContentView.Content>
+        <TableView Intent="Settings" BackgroundColor="White">
+            <TableRoot>
+                <TableSection Title="Adicionar Empregado">
+                    <EntryCell x:Name="txtEmpName" Label="Nome" Keyboard="Text" />
+                    <EntryCell x:Name="txtDesign" Label="Cargo" Keyboard="Text" />
+                    <EntryCell x:Name="txtDepartment" Label="Departamento" Keyboard="Text" />
+                    <EntryCell x:Name="txtQualification" Label="Qualificação" Keyboard="Text" />
+                    <ViewCell>
+                        <ContentView Padding="0,0">
+                            <ContentView.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" iOS="10,0" WinPhone="0,15,0,0" />
+                            </ContentView.Padding>
+                            <ContentView.Content>
+                                <Button BackgroundColor="#fd6d6d" Text="Salvar" TextColor="White" Clicked="OnSaveClicked" />
+                            </ContentView.Content>
+                        </ContentView>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentView.Content>
+</ContentPage>
